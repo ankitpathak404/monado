@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "A5iGtSat/eo=",
+  "success": true,
+  "projectFilePath": "/home/ankit/monado/StereoKitTest/StereoKitTest.csproj",
+  "expectedPackageFiles": [
+    "/home/ankit/.nuget/packages/stereokit/0.3.11/stereokit.0.3.11.nupkg.sha512",
+    "/home/ankit/.nuget/packages/system.numerics.vectors/4.6.1/system.numerics.vectors.4.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}

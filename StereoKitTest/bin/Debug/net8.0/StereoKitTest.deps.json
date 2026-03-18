@@ -1,0 +1,114 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "StereoKitTest/1.0.0": {
+        "dependencies": {
+          "StereoKit": "0.3.11"
+        },
+        "runtime": {
+          "StereoKitTest.dll": {}
+        }
+      },
+      "StereoKit/0.3.11": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.6.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/StereoKit.dll": {
+            "assemblyVersion": "0.3.11.0",
+            "fileVersion": "0.3.11.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/android-arm64/native/libStereoKitC.so": {
+            "rid": "android-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/android-arm64/native/libStereoKitC.so.dbg": {
+            "rid": "android-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/android-x64/native/libStereoKitC.so": {
+            "rid": "android-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/android-x64/native/libStereoKitC.so.dbg": {
+            "rid": "android-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libStereoKitC.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libStereoKitC.so.dbg": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libStereoKitC.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libStereoKitC.so.dbg": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/StereoKitC.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/StereoKitC.pdb": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/StereoKitC.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/StereoKitC.pdb": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.6.1": {}
+    }
+  },
+  "libraries": {
+    "StereoKitTest/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StereoKit/0.3.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N66M+a4096CQ+rxFf75YpPmMQLj3PRzhXl2RTuD3zqaCCi//x/8PhX51APuau6Dzyse7A/1Tt8z2QQaygHcMcQ==",
+      "path": "stereokit/0.3.11",
+      "hashPath": "stereokit.0.3.11.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.6.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sQxefTnhagrhoq2ReR0D/6K0zJcr9Hrd6kikeXsA1I8kOCboTavcUC4r7TSfpKFeE163uMuxZcyfO1mGO3EN8Q==",
+      "path": "system.numerics.vectors/4.6.1",
+      "hashPath": "system.numerics.vectors.4.6.1.nupkg.sha512"
+    }
+  }
+}

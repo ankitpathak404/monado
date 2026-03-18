@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StereoKit" Version="0.3.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Exclude sub-project artifacts to avoid duplicate attribute errors -->
+    <Compile Remove="SKProjectName\obj\**" />
+    <Compile Remove="SKProjectName\bin\**" />
+    
+    <!-- Exclude Android specific code which doesn't belong in a Desktop build -->
+    <Compile Remove="SKProjectName\Platforms\Android\**" />
+    <Compile Remove="**\*.Android.cs" />
+    
+    <None Include="SKProjectName\Platforms\Android\**" />
+    <None Include="**\*.Android.cs" />
+    
+    <!-- Also exclude the nested project file itself from being treated as a source -->
+    <None Remove="SKProjectName\SKProjectName.csproj" />
+  </ItemGroup>
+
+</Project>
