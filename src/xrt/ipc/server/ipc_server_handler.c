@@ -1753,6 +1753,8 @@ ipc_handle_swapchain_create(volatile struct ipc_client_state *ics,
                             uint32_t *out_image_count,
                             uint64_t *out_size,
                             bool *out_use_dedicated_allocation,
+                            uint64_t *out_modifier,
+                            uint32_t *out_row_pitch,
                             uint32_t max_handle_capacity,
                             xrt_graphics_buffer_handle_t *out_handles,
                             uint32_t *out_handle_count)
@@ -1802,6 +1804,8 @@ ipc_handle_swapchain_create(volatile struct ipc_client_state *ics,
 	// Assuming all images allocated in the same swapchain have the same allocation requirements.
 	*out_size = xscn->images[0].size;
 	*out_use_dedicated_allocation = xscn->images[0].use_dedicated_allocation;
+	*out_modifier = xscn->images[0].drm_format_modifier;
+	*out_row_pitch = xscn->images[0].row_pitch;
 	*out_id = index;
 	*out_image_count = xsc->image_count;
 

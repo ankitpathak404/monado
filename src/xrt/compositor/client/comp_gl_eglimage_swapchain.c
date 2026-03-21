@@ -30,6 +30,7 @@
 #include "client/comp_gl_client.h"
 #include "client/comp_egl_client.h"
 #include "client/comp_gl_eglimage_swapchain.h"
+#include "client/comp_vk_client.h"
 
 
 #ifdef XRT_GRAPHICS_BUFFER_HANDLE_IS_AHARDWAREBUFFER
@@ -115,14 +116,14 @@ static inline uint32_t
 gl_format_to_drm_fourcc(uint64_t format)
 {
 	switch (format) {
-
-	case GL_RGBA8: return XRT_FOURCC('R', 'A', '2', '4');        /*DRM_FORMAT_RGBA8888*/
-	case GL_SRGB8_ALPHA8: return XRT_FOURCC('R', 'A', '2', '4'); /*DRM_FORMAT_RGBA8888*/
-	case GL_RGB10_A2: return XRT_FOURCC('A', 'B', '3', '0');     /*DRM_FORMAT_ABGR2101010*/
-#if 0
-	/* couldn't find a matching code? */
-	case GL_RGBA16F:
-#endif
+	case GL_RGBA8: return XRT_FOURCC('A', 'R', '2', '4');        /*DRM_FORMAT_ARGB8888*/
+	case GL_SRGB8_ALPHA8: return XRT_FOURCC('A', 'R', '2', '4'); /*DRM_FORMAT_ARGB8888*/
+	case GL_RGB10_A2: return XRT_FOURCC('A', 'R', '3', '0');     /*DRM_FORMAT_ARGB2101010*/
+	case GL_DEPTH_COMPONENT16: return XRT_FOURCC('R', '1', '6', ' ');
+	case GL_DEPTH_COMPONENT24: return XRT_FOURCC('R', '2', '4', ' ');
+	case GL_DEPTH_COMPONENT32F: return XRT_FOURCC('R', '3', '2', ' ');
+	case GL_DEPTH24_STENCIL8: return XRT_FOURCC('D', '2', '4', '8');
+	case GL_DEPTH32F_STENCIL8: return XRT_FOURCC('D', '3', '2', '8');
 	default: EGL_SC_ERROR("Cannot convert GL format 0x%08" PRIx64 " to DRM FOURCC format!", format); return 0;
 	}
 }
@@ -130,15 +131,15 @@ static inline uint32_t
 gl_format_to_bpp(uint64_t format)
 {
 	switch (format) {
-
 	case GL_RGBA8: return 32;        /*DRM_FORMAT_RGBA8888*/
 	case GL_SRGB8_ALPHA8: return 32; /*DRM_FORMAT_RGBA8888*/
 	case GL_RGB10_A2: return 32;     /*DRM_FORMAT_ABGR2101010*/
-#if 0
-	/* couldn't find a matching code? */
-	case GL_RGBA16F:
-#endif
-	default: EGL_SC_ERROR("Cannot convert GL format 0x%08" PRIx64 " to DRM FOURCC format!", format); return 0;
+	case GL_DEPTH_COMPONENT16: return 16;
+	case GL_DEPTH_COMPONENT24: return 32;
+	case GL_DEPTH_COMPONENT32F: return 32;
+	case GL_DEPTH24_STENCIL8: return 32;
+	case GL_DEPTH32F_STENCIL8: return 64;
+	default: EGL_SC_ERROR("Cannot convert GL format 0x%08" PRIx64 " to BPP!", format); return 0;
 	}
 }
 #endif // defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD)
@@ -220,10 +221,26 @@ client_gl_eglimage_swapchain_create(struct xrt_compositor *xc,
 	ogl_texture_target_for_swapchain_info(info, &tex_target, &binding_enum);
 	sc->base.tex_target = tex_target;
 
+	// Identify if this is a depth swapchain
+	bool is_depth = (info->format == GL_DEPTH_COMPONENT16 || info->format == GL_DEPTH_COMPONENT24 ||
+	                 info->format == GL_DEPTH_COMPONENT32F || info->format == GL_DEPTH24_STENCIL8 ||
+	                 info->format == GL_DEPTH32F_STENCIL8);
+
 	for (uint32_t i = 0; i < native_xsc->image_count; i++) {
 
 		// Bind new texture name to the target.
 		glBindTexture(tex_target, xscgl->images[i]);
+
+		if (is_depth) {
+			EGL_SC_INFO("Bypassing EGLImage import for depth format 0x%04" PRIx64 ". Allocating local GL texture instead.", (uint64_t)info->format);
+			if (info->format == GL_DEPTH24_STENCIL8 || info->format == GL_DEPTH32F_STENCIL8) {
+				glTexImage2D(tex_target, 0, info->format, info->width, info->height, 0, GL_DEPTH_STENCIL, GL_UNSIGNED_INT_24_8, NULL);
+			} else {
+				glTexImage2D(tex_target, 0, info->format, info->width, info->height, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
+			}
+			sc->egl_images[i] = EGL_NO_IMAGE_KHR;
+			continue;
+		}
 
 		EGLClientBuffer native_buffer = NULL;
 
@@ -261,28 +278,71 @@ client_gl_eglimage_swapchain_create(struct xrt_compositor *xc,
 
 		EGLenum source = EGL_NATIVE_BUFFER_ANDROID;
 #elif defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD)
-		EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR,
-		                  EGL_TRUE,
-		                  EGL_WIDTH,
-		                  info->width,
-		                  EGL_HEIGHT,
-		                  info->height,
-		                  EGL_LINUX_DRM_FOURCC_EXT,
-		                  format,
-		                  EGL_DMA_BUF_PLANE0_FD_EXT,
-		                  xscn->images[i].handle,
-		                  EGL_DMA_BUF_PLANE0_OFFSET_EXT,
-		                  0,
-		                  EGL_DMA_BUF_PLANE0_PITCH_EXT,
-		                  row_pitch,
-		                  EGL_NONE};
-		EGLenum source = EGL_LINUX_DMA_BUF_EXT;
+		uint32_t image_row_pitch = row_pitch;
+		if (xscn->images[i].row_pitch != 0) {
+			image_row_pitch = xscn->images[i].row_pitch;
+			EGL_SC_INFO("Using server-provided row pitch: %" PRIu32 " bytes", image_row_pitch);
+		}
+
+		uint64_t modifier = xscn->images[i].drm_format_modifier;
+		bool has_modifier = (modifier != 0x00ffffffffffffffULL); // DRM_FORMAT_MOD_INVALID
+		EGL_SC_INFO("Importing swapchain image %u: format=0x%08x, modifier=0x%" PRIx64 " (has_modifier=%d)", i, format, modifier, has_modifier);
+
+		if (has_modifier) {
+			EGL_SC_INFO("Using DRM modifier: 0x%" PRIx64, modifier);
+			EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR,
+			                  EGL_TRUE,
+			                  EGL_WIDTH,
+			                  info->width,
+			                  EGL_HEIGHT,
+			                  info->height,
+			                  EGL_LINUX_DRM_FOURCC_EXT,
+			                  format,
+			                  EGL_DMA_BUF_PLANE0_FD_EXT,
+			                  xscn->images[i].handle,
+			                  EGL_DMA_BUF_PLANE0_OFFSET_EXT,
+			                  0,
+			                  EGL_DMA_BUF_PLANE0_PITCH_EXT,
+			                  image_row_pitch,
+			                  EGL_DMA_BUF_PLANE0_MODIFIER_LO_EXT,
+			                  (EGLint)(modifier & 0xFFFFFFFF),
+			                  EGL_DMA_BUF_PLANE0_MODIFIER_HI_EXT,
+			                  (EGLint)(modifier >> 32),
+			                  EGL_NONE};
+			EGLenum source = EGL_LINUX_DMA_BUF_EXT;
+			EGL_SC_INFO("EGL import using modifier: w=%u h=%u format=0x%08x pitch=%" PRIu32, info->width, info->height, format, image_row_pitch);
+			sc->egl_images[i] = eglCreateImageKHR(sc->display, EGL_NO_CONTEXT, source, native_buffer, attrs);
+		} else {
+			EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR,
+			                  EGL_TRUE,
+			                  EGL_WIDTH,
+			                  info->width,
+			                  EGL_HEIGHT,
+			                  info->height,
+			                  EGL_LINUX_DRM_FOURCC_EXT,
+			                  format,
+			                  EGL_DMA_BUF_PLANE0_FD_EXT,
+			                  xscn->images[i].handle,
+			                  EGL_DMA_BUF_PLANE0_OFFSET_EXT,
+			                  0,
+			                  EGL_DMA_BUF_PLANE0_PITCH_EXT,
+			                  image_row_pitch,
+			                  EGL_NONE};
+			EGLenum source = EGL_LINUX_DMA_BUF_EXT;
+			EGL_SC_INFO("EGL import LINEAR: w=%u h=%u format=0x%08x pitch=%" PRIu32, info->width, info->height, format, image_row_pitch);
+			sc->egl_images[i] = eglCreateImageKHR(sc->display, EGL_NO_CONTEXT, source, native_buffer, attrs);
+		}
 #else
 #error "need port"
 #endif
-		sc->egl_images[i] = eglCreateImageKHR(sc->display, EGL_NO_CONTEXT, source, native_buffer, attrs);
 		if (EGL_NO_IMAGE_KHR == sc->egl_images[i]) {
-			EGL_SC_ERROR("eglCreateImageKHR failed");
+			EGLint err = eglGetError();
+			const char *exts = eglQueryString(sc->display, EGL_EXTENSIONS);
+			bool import_modifiers_supported = exts && strstr(exts, "EGL_EXT_image_dma_buf_import_modifiers") != NULL;
+			EGL_SC_ERROR("eglCreateImageKHR failed with error 0x%x (GL_format: 0x%04" PRIx64 ", DRM_format: 0x%08x, %dx%d, modifiers extension: %s, pitch: %u, modifier: 0x%" PRIx64 ")",
+			             err, info->format, format, info->width, info->height,
+			             import_modifiers_supported ? "supported" : "unsupported", image_row_pitch,
+			             xscn->images[i].drm_format_modifier);
 			client_gl_eglimage_swapchain_teardown_storage(sc);
 			free(sc);
 			return NULL;

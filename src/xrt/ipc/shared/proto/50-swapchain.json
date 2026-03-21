@@ -18,7 +18,9 @@
 			{"name": "id", "type": "uint32_t"},
 			{"name": "image_count", "type": "uint32_t"},
 			{"name": "size", "type": "uint64_t"},
-			{"name": "use_dedicated_allocation", "type": "bool"}
+			{"name": "use_dedicated_allocation", "type": "bool"},
+			{"name": "modifier", "type": "uint64_t"},
+			{"name": "row_pitch", "type": "uint32_t"}
 		],
 		"out_handles": {"type": "xrt_graphics_buffer_handle_t"}
 	},

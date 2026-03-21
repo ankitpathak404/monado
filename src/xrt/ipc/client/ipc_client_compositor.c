@@ -279,6 +279,8 @@ swapchain_server_create(struct ipc_client_compositor *icc,
 	uint32_t image_count;
 	uint64_t size;
 	bool use_dedicated_allocation;
+	uint64_t modifier;
+	uint32_t row_pitch;
 
 	xret = ipc_call_swapchain_create( //
 	    icc->ipc_c,                   // connection
@@ -287,6 +289,8 @@ swapchain_server_create(struct ipc_client_compositor *icc,
 	    &image_count,                 // out
 	    &size,                        // out
 	    &use_dedicated_allocation,    // out
+	    &modifier,                    // out
+	    &row_pitch,                   // out
 	    remote_handles,               // handles
 	    XRT_MAX_SWAPCHAIN_IMAGES);    // handles
 	if (xret == XRT_ERROR_SWAPCHAIN_FLAG_VALID_BUT_UNSUPPORTED) {
@@ -311,6 +315,8 @@ swapchain_server_create(struct ipc_client_compositor *icc,
 		ics->base.images[i].handle = remote_handles[i];
 		ics->base.images[i].size = size;
 		ics->base.images[i].use_dedicated_allocation = use_dedicated_allocation;
+		ics->base.images[i].drm_format_modifier = modifier;
+		ics->base.images[i].row_pitch = row_pitch;
 	}
 
 	*out_xsc = &ics->base.base;

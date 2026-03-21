@@ -30,6 +30,12 @@ struct vk_image
 	VkDeviceMemory memory;
 	VkDeviceSize size;
 	bool use_dedicated_allocation;
+
+	//! DRM format modifier (DRM_FORMAT_MOD_INVALID if unknown).
+	uint64_t drm_format_modifier;
+
+	//! Row pitch in bytes (0 if unknown).
+	uint32_t row_pitch;
 };
 
 struct vk_image_collection

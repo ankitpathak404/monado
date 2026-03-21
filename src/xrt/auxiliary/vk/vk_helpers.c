@@ -1170,6 +1170,28 @@ vk_create_image_from_native(struct vk_bundle *vk,
 	    .initialLayout = VK_IMAGE_LAYOUT_UNDEFINED,
 	};
 
+#if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD) && defined(VK_EXT_image_drm_format_modifier)
+	VkSubresourceLayout plane_layout = {0};
+	VkImageDrmFormatModifierExplicitCreateInfoEXT explicit_mod_info = {
+	    .sType = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_EXPLICIT_CREATE_INFO_EXT,
+	    .pNext = vk_info.pNext,
+	};
+	if (vk->has_EXT_image_drm_format_modifier && image_native->drm_format_modifier != 0x00ffffffffffffffULL) {
+		plane_layout.offset = 0;
+		plane_layout.size = 0;
+		plane_layout.rowPitch = image_native->row_pitch;
+		plane_layout.arrayPitch = 0;
+		plane_layout.depthPitch = 0;
+
+		explicit_mod_info.drmFormatModifier = image_native->drm_format_modifier;
+		explicit_mod_info.drmFormatModifierPlaneCount = 1;
+		explicit_mod_info.pPlaneLayouts = &plane_layout;
+
+		vk_info.pNext = &explicit_mod_info;
+		vk_info.tiling = VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT;
+	}
+#endif
+
 	VkImage image = VK_NULL_HANDLE;
 	ret = vk->vkCreateImage(vk->device, &vk_info, NULL, &image);
 	if (ret != VK_SUCCESS) {

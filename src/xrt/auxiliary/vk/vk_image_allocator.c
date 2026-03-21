@@ -17,6 +17,16 @@
 #include <vulkan/vulkan_core.h>
 #include <xrt/xrt_handles.h>
 
+// DRM_FORMAT_MOD_INVALID
+#ifndef DRM_FORMAT_MOD_INVALID
+#define DRM_FORMAT_MOD_INVALID 0x00ffffffffffffffULL
+#endif
+
+// DRM_FORMAT_MOD_LINEAR
+#ifndef DRM_FORMAT_MOD_LINEAR
+#define DRM_FORMAT_MOD_LINEAR 0
+#endif
+
 #ifdef XRT_OS_LINUX
 #include <unistd.h>
 #endif
@@ -258,6 +268,86 @@ create_image(struct vk_bundle *vk, const struct xrt_swapchain_create_info *info,
 	    .sharingMode = VK_SHARING_MODE_EXCLUSIVE,
 	    .initialLayout = VK_IMAGE_LAYOUT_UNDEFINED,
 	};
+
+	// Track whether we used DRM modifier tiling.
+	bool used_drm_format_modifier_tiling = false;
+
+#if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD) && defined(VK_EXT_image_drm_format_modifier)
+	/*
+	 * When VK_EXT_image_drm_format_modifier is available, use DRM modifier
+	 * tiling instead of VK_IMAGE_TILING_OPTIMAL. This allows us to query
+	 * the actual modifier chosen by the driver and pass it to EGL on the
+	 * client side, which is critical for GPUs like V3D that use non-linear
+	 * tiling (UIF) for optimal images.
+	 */
+	VkDrmFormatModifierPropertiesListEXT mod_props_list = {
+	    .sType = VK_STRUCTURE_TYPE_DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT,
+	};
+	VkFormatProperties2 format_props2 = {
+	    .sType = VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_2,
+	    .pNext = &mod_props_list,
+	};
+
+	uint64_t *supported_modifiers = NULL;
+
+	if (vk->has_EXT_image_drm_format_modifier) {
+		// Query how many modifiers are supported for this format.
+		vk->vkGetPhysicalDeviceFormatProperties2(vk->physical_device, image_format, &format_props2);
+
+		if (mod_props_list.drmFormatModifierCount > 0) {
+			// Allocate and query the actual modifier properties.
+			VkDrmFormatModifierPropertiesEXT *mod_props = U_TYPED_ARRAY_CALLOC(
+			    VkDrmFormatModifierPropertiesEXT, mod_props_list.drmFormatModifierCount);
+			mod_props_list.pDrmFormatModifierProperties = mod_props;
+
+			vk->vkGetPhysicalDeviceFormatProperties2(vk->physical_device, image_format, &format_props2);
+
+			// Build the list of modifiers, but FORCE linear.
+			supported_modifiers = U_TYPED_ARRAY_CALLOC(uint64_t, 1);
+			supported_modifiers[0] = DRM_FORMAT_MOD_LINEAR;
+			
+			VkImageDrmFormatModifierListCreateInfoEXT drm_mod_list = {
+			    .sType = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT,
+			    .pNext = create_info.pNext,
+			    .drmFormatModifierCount = 1,
+			    .pDrmFormatModifiers = supported_modifiers,
+			};
+			create_info.pNext = &drm_mod_list;
+			create_info.tiling = VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT;
+			used_drm_format_modifier_tiling = true;
+
+			U_LOG_D("create_image: Using VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT with %u modifiers",
+			        mod_props_list.drmFormatModifierCount);
+
+			ret = vk->vkCreateImage(vk->device, &create_info, NULL, &image);
+
+			if (ret == VK_SUCCESS) {
+				VkImageDrmFormatModifierPropertiesEXT mod_props_final = {
+					.sType = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT,
+				};
+				vk->vkGetImageDrmFormatModifierPropertiesEXT(vk->device, image, &mod_props_final);
+				U_LOG_I("create_image: Successfully created image with modifier 0x%" PRIx64, mod_props_final.drmFormatModifier);
+			}
+
+			free(mod_props);
+
+			if (ret != VK_SUCCESS) {
+				// Fallback: try VK_IMAGE_TILING_OPTIMAL
+				U_LOG_W("create_image: DRM modifier tiling failed (%s), falling back to TILING_OPTIMAL",
+				        vk_result_string(ret));
+				create_info.pNext = next_chain;
+				create_info.tiling = VK_IMAGE_TILING_OPTIMAL;
+				used_drm_format_modifier_tiling = false;
+				free(supported_modifiers);
+				supported_modifiers = NULL;
+			}
+		}
+	}
+	if (supported_modifiers != NULL) {
+		free(supported_modifiers);
+		supported_modifiers = NULL;
+	}
+#endif // XRT_GRAPHICS_BUFFER_HANDLE_IS_FD && VK_EXT_image_drm_format_modifier
 #if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_AHARDWAREBUFFER)
 	// VUID-VkImageCreateInfo-pNext-01974
 	if (format_android.externalFormat != 0) {
@@ -266,7 +356,9 @@ create_image(struct vk_bundle *vk, const struct xrt_swapchain_create_info *info,
 	}
 #endif
 
-	ret = vk->vkCreateImage(vk->device, &create_info, NULL, &image);
+	if (image == VK_NULL_HANDLE) {
+		ret = vk->vkCreateImage(vk->device, &create_info, NULL, &image);
+	}
 	VK_CHK_AND_RET(ret, "vkCreateImage");
 
 	// In
@@ -363,6 +455,37 @@ create_image(struct vk_bundle *vk, const struct xrt_swapchain_create_info *info,
 	out_image->memory = device_memory;
 	out_image->size = memory_requirements.memoryRequirements.size;
 	out_image->use_dedicated_allocation = use_dedicated_allocation;
+	out_image->drm_format_modifier = DRM_FORMAT_MOD_INVALID;
+	out_image->row_pitch = 0;
+
+#if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD) && defined(VK_EXT_image_drm_format_modifier)
+	if (used_drm_format_modifier_tiling && vk->vkGetImageDrmFormatModifierPropertiesEXT != NULL) {
+		VkImageDrmFormatModifierPropertiesEXT drm_mod_props = {
+		    .sType = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT,
+		};
+		VkResult mod_ret = vk->vkGetImageDrmFormatModifierPropertiesEXT(vk->device, image, &drm_mod_props);
+		if (mod_ret == VK_SUCCESS) {
+			out_image->drm_format_modifier = drm_mod_props.drmFormatModifier;
+			U_LOG_D("create_image: DRM modifier = 0x%" PRIx64, out_image->drm_format_modifier);
+
+			// Query the row pitch via subresource layout.
+			VkImageSubresource subresource = {
+			    .aspectMask = VK_IMAGE_ASPECT_MEMORY_PLANE_0_BIT_EXT,
+			    .mipLevel = 0,
+			    .arrayLayer = 0,
+			};
+			VkSubresourceLayout layout = {0};
+			vk->vkGetImageSubresourceLayout(vk->device, image, &subresource, &layout);
+			out_image->row_pitch = (uint32_t)layout.rowPitch;
+			U_LOG_D("create_image: Row pitch = %" PRIu32 " bytes", out_image->row_pitch);
+		} else {
+			U_LOG_W("create_image: vkGetImageDrmFormatModifierPropertiesEXT failed: %s",
+			        vk_result_string(mod_ret));
+		}
+	}
+#else
+	(void)used_drm_format_modifier_tiling;
+#endif
 
 	return ret;
 }

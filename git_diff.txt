@@ -1,0 +1,806 @@
+diff --git a/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName b/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName
+index 24b0f4d..dd47094 100755
+Binary files a/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName and b/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName differ
+diff --git a/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.dll b/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.dll
+index c37113c..703f672 100644
+Binary files a/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.dll and b/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.dll differ
+diff --git a/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.pdb b/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.pdb
+index fb116ba..ca2d9c3 100644
+Binary files a/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.pdb and b/StereoKitTest/SKProjectName/bin/Debug/net8.0/SKProjectName.pdb differ
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjec.D2E4C66B.Up2Date b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjec.D2E4C66B.Up2Date
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfo.cs b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfo.cs
+index df3084c..3efe566 100644
+--- a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfo.cs
++++ b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfo.cs
+@@ -13,7 +13,7 @@ using System.Reflection;
+ [assembly: System.Reflection.AssemblyCompanyAttribute("SKProjectName")]
+ [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+ [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b59c00209a60e17a3296d0ee1936473444e8f649")]
++[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28c16c6591456af947f52e27489ae9005e0f8197")]
+ [assembly: System.Reflection.AssemblyProductAttribute("SKProjectName")]
+ [assembly: System.Reflection.AssemblyTitleAttribute("SKProjectName")]
+ [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfoInputs.cache b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfoInputs.cache
+index 02cd08e..74cf6e3 100644
+--- a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfoInputs.cache
++++ b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfoInputs.cache
+@@ -1 +1 @@
+-71d922a28d22d327fa5b4fe855e40c181dbf5de98804049f0872dae59bee0ecd
++a354c4f03b72fd23700ca85e17a4c6d375337c338b1aa88298f01694dd75891c
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.assets.cache b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.assets.cache
+index 3607ed4..49cb448 100644
+Binary files a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.assets.cache and b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.assets.cache differ
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CoreCompileInputs.cache b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CoreCompileInputs.cache
+index 9598c46..d5fe7d9 100644
+--- a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CoreCompileInputs.cache
++++ b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CoreCompileInputs.cache
+@@ -1 +1 @@
+-86a4c1bb696afa855e9aa2184a915a264abf1f5ae031ea1073b7d11cde8c05ad
++31892f2057476b029338af050d2a9fee78b209c1b1b59063a8153b2fb699ff68
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.FileListAbsolute.txt b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.FileListAbsolute.txt
+index b3665d2..188dc25 100644
+--- a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.FileListAbsolute.txt
++++ b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.FileListAbsolute.txt
+@@ -24,9 +24,10 @@
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfoInputs.cache
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfo.cs
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CoreCompileInputs.cache
+-/home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjec.D2E4C66B.Up2Date
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.dll
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/refint/SKProjectName.dll
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.pdb
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.genruntimeconfig.cache
+ /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/ref/SKProjectName.dll
++/home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.sourcelink.json
++/home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CopyComplete
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.dll b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.dll
+index c37113c..703f672 100644
+Binary files a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.dll and b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.dll differ
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.pdb b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.pdb
+index fb116ba..ca2d9c3 100644
+Binary files a/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.pdb and b/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.pdb differ
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/apphost b/StereoKitTest/SKProjectName/obj/Debug/net8.0/apphost
+index 24b0f4d..dd47094 100755
+Binary files a/StereoKitTest/SKProjectName/obj/Debug/net8.0/apphost and b/StereoKitTest/SKProjectName/obj/Debug/net8.0/apphost differ
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/ref/SKProjectName.dll b/StereoKitTest/SKProjectName/obj/Debug/net8.0/ref/SKProjectName.dll
+index 4c394fc..54ef5ee 100644
+Binary files a/StereoKitTest/SKProjectName/obj/Debug/net8.0/ref/SKProjectName.dll and b/StereoKitTest/SKProjectName/obj/Debug/net8.0/ref/SKProjectName.dll differ
+diff --git a/StereoKitTest/SKProjectName/obj/Debug/net8.0/refint/SKProjectName.dll b/StereoKitTest/SKProjectName/obj/Debug/net8.0/refint/SKProjectName.dll
+index 4c394fc..54ef5ee 100644
+Binary files a/StereoKitTest/SKProjectName/obj/Debug/net8.0/refint/SKProjectName.dll and b/StereoKitTest/SKProjectName/obj/Debug/net8.0/refint/SKProjectName.dll differ
+diff --git a/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.dgspec.json b/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.dgspec.json
+index 774dd69..fe36fd5 100644
+--- a/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.dgspec.json
++++ b/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.dgspec.json
+@@ -32,11 +32,6 @@
+           "warnAsError": [
+             "NU1605"
+           ]
+-        },
+-        "restoreAuditProperties": {
+-          "enableAudit": "true",
+-          "auditLevel": "low",
+-          "auditMode": "direct"
+         }
+       },
+       "frameworks": {
+@@ -64,7 +59,7 @@
+               "privateAssets": "all"
+             }
+           },
+-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.418/PortableRuntimeIdentifierGraph.json"
++          "runtimeIdentifierGraphPath": "/home/ankit/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+         }
+       }
+     }
+diff --git a/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.g.props b/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.g.props
+index 413fb87..b4d8b5c 100644
+--- a/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.g.props
++++ b/StereoKitTest/SKProjectName/obj/SKProjectName.csproj.nuget.g.props
+@@ -7,7 +7,7 @@
+     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/home/ankit/.nuget/packages/</NuGetPackageRoot>
+     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/home/ankit/.nuget/packages/</NuGetPackageFolders>
+     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.11.1</NuGetToolVersion>
++    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.8.0</NuGetToolVersion>
+   </PropertyGroup>
+   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+     <SourceRoot Include="/home/ankit/.nuget/packages/" />
+diff --git a/StereoKitTest/SKProjectName/obj/project.assets.json b/StereoKitTest/SKProjectName/obj/project.assets.json
+index 5a890d5..343ddcf 100644
+--- a/StereoKitTest/SKProjectName/obj/project.assets.json
++++ b/StereoKitTest/SKProjectName/obj/project.assets.json
+@@ -191,11 +191,6 @@
+         "warnAsError": [
+           "NU1605"
+         ]
+-      },
+-      "restoreAuditProperties": {
+-        "enableAudit": "true",
+-        "auditLevel": "low",
+-        "auditMode": "direct"
+       }
+     },
+     "frameworks": {
+@@ -223,7 +218,7 @@
+             "privateAssets": "all"
+           }
+         },
+-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.418/PortableRuntimeIdentifierGraph.json"
++        "runtimeIdentifierGraphPath": "/home/ankit/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+       }
+     }
+   }
+diff --git a/StereoKitTest/SKProjectName/obj/project.nuget.cache b/StereoKitTest/SKProjectName/obj/project.nuget.cache
+index 5e738fa..c99164f 100644
+--- a/StereoKitTest/SKProjectName/obj/project.nuget.cache
++++ b/StereoKitTest/SKProjectName/obj/project.nuget.cache
+@@ -1,6 +1,6 @@
+ {
+   "version": 2,
+-  "dgSpecHash": "giZulH2dbG0=",
++  "dgSpecHash": "IZhbFhCN9k71YdnVlip69pXxiwnoaNiZyDUIYNcYvw9oiAyzRWq2cnkA6B5KGEq3qhYuExuPIGgpkvT+cyuKWw==",
+   "success": true,
+   "projectFilePath": "/home/ankit/monado/StereoKitTest/SKProjectName/SKProjectName.csproj",
+   "expectedPackageFiles": [
+diff --git a/StereoKitTest/bin/Debug/net8.0/StereoKitTest b/StereoKitTest/bin/Debug/net8.0/StereoKitTest
+index c3060dc..c4f64f3 100755
+Binary files a/StereoKitTest/bin/Debug/net8.0/StereoKitTest and b/StereoKitTest/bin/Debug/net8.0/StereoKitTest differ
+diff --git a/StereoKitTest/bin/Debug/net8.0/StereoKitTest.dll b/StereoKitTest/bin/Debug/net8.0/StereoKitTest.dll
+index 5a62a32..490d442 100644
+Binary files a/StereoKitTest/bin/Debug/net8.0/StereoKitTest.dll and b/StereoKitTest/bin/Debug/net8.0/StereoKitTest.dll differ
+diff --git a/StereoKitTest/bin/Debug/net8.0/StereoKitTest.pdb b/StereoKitTest/bin/Debug/net8.0/StereoKitTest.pdb
+index 93da1bc..34e9eb9 100644
+Binary files a/StereoKitTest/bin/Debug/net8.0/StereoKitTest.pdb and b/StereoKitTest/bin/Debug/net8.0/StereoKitTest.pdb differ
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKi.809E3103.Up2Date b/StereoKitTest/obj/Debug/net8.0/StereoKi.809E3103.Up2Date
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfo.cs b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfo.cs
+index 1c33e63..86dd915 100644
+--- a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfo.cs
++++ b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfo.cs
+@@ -13,7 +13,7 @@ using System.Reflection;
+ [assembly: System.Reflection.AssemblyCompanyAttribute("StereoKitTest")]
+ [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+ [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b59c00209a60e17a3296d0ee1936473444e8f649")]
++[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28c16c6591456af947f52e27489ae9005e0f8197")]
+ [assembly: System.Reflection.AssemblyProductAttribute("StereoKitTest")]
+ [assembly: System.Reflection.AssemblyTitleAttribute("StereoKitTest")]
+ [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfoInputs.cache b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfoInputs.cache
+index ea05df4..af7ada6 100644
+--- a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfoInputs.cache
++++ b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfoInputs.cache
+@@ -1 +1 @@
+-ba571c0497b9ee393daa1a686fc6dac1a45f261951ca4fcfd1870e4ae72fdc4f
++46301221803b3d121cac78d2a12c528af8b6471c5d4a8f2f0c1904aab7d56900
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.assets.cache b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.assets.cache
+index e322336..1be4bbe 100644
+Binary files a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.assets.cache and b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.assets.cache differ
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.CoreCompileInputs.cache b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.CoreCompileInputs.cache
+index 1c63f60..a323c54 100644
+--- a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.CoreCompileInputs.cache
++++ b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.CoreCompileInputs.cache
+@@ -1 +1 @@
+-a3a3e0510ecdf9e81e737a7dfabca6531fd32c36539c7eb031982352f37a36ce
++a40de8894d098b29f0473da656dc65911932e08fa6a97f0f746ff060b4db19cd
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.FileListAbsolute.txt b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.FileListAbsolute.txt
+index 7abf633..e6f224c 100644
+--- a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.FileListAbsolute.txt
++++ b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.FileListAbsolute.txt
+@@ -50,9 +50,10 @@
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfoInputs.cache
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.AssemblyInfo.cs
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.CoreCompileInputs.cache
+-/home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKi.809E3103.Up2Date
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.dll
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/refint/StereoKitTest.dll
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.pdb
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.genruntimeconfig.cache
+ /home/ankit/monado/StereoKitTest/obj/Debug/net8.0/ref/StereoKitTest.dll
++/home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.sourcelink.json
++/home/ankit/monado/StereoKitTest/obj/Debug/net8.0/StereoKitTest.csproj.CopyComplete
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.dll b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.dll
+index 5a62a32..490d442 100644
+Binary files a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.dll and b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.dll differ
+diff --git a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.pdb b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.pdb
+index 93da1bc..34e9eb9 100644
+Binary files a/StereoKitTest/obj/Debug/net8.0/StereoKitTest.pdb and b/StereoKitTest/obj/Debug/net8.0/StereoKitTest.pdb differ
+diff --git a/StereoKitTest/obj/Debug/net8.0/apphost b/StereoKitTest/obj/Debug/net8.0/apphost
+index c3060dc..c4f64f3 100755
+Binary files a/StereoKitTest/obj/Debug/net8.0/apphost and b/StereoKitTest/obj/Debug/net8.0/apphost differ
+diff --git a/StereoKitTest/obj/Debug/net8.0/ref/StereoKitTest.dll b/StereoKitTest/obj/Debug/net8.0/ref/StereoKitTest.dll
+index 12bf370..51f51de 100644
+Binary files a/StereoKitTest/obj/Debug/net8.0/ref/StereoKitTest.dll and b/StereoKitTest/obj/Debug/net8.0/ref/StereoKitTest.dll differ
+diff --git a/StereoKitTest/obj/Debug/net8.0/refint/StereoKitTest.dll b/StereoKitTest/obj/Debug/net8.0/refint/StereoKitTest.dll
+index 12bf370..51f51de 100644
+Binary files a/StereoKitTest/obj/Debug/net8.0/refint/StereoKitTest.dll and b/StereoKitTest/obj/Debug/net8.0/refint/StereoKitTest.dll differ
+diff --git a/StereoKitTest/obj/StereoKitTest.csproj.nuget.dgspec.json b/StereoKitTest/obj/StereoKitTest.csproj.nuget.dgspec.json
+index 3dc4384..4587fc2 100644
+--- a/StereoKitTest/obj/StereoKitTest.csproj.nuget.dgspec.json
++++ b/StereoKitTest/obj/StereoKitTest.csproj.nuget.dgspec.json
+@@ -32,11 +32,6 @@
+           "warnAsError": [
+             "NU1605"
+           ]
+-        },
+-        "restoreAuditProperties": {
+-          "enableAudit": "true",
+-          "auditLevel": "low",
+-          "auditMode": "direct"
+         }
+       },
+       "frameworks": {
+@@ -64,7 +59,7 @@
+               "privateAssets": "all"
+             }
+           },
+-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.418/PortableRuntimeIdentifierGraph.json"
++          "runtimeIdentifierGraphPath": "/home/ankit/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+         }
+       }
+     }
+diff --git a/StereoKitTest/obj/StereoKitTest.csproj.nuget.g.props b/StereoKitTest/obj/StereoKitTest.csproj.nuget.g.props
+index 413fb87..b4d8b5c 100644
+--- a/StereoKitTest/obj/StereoKitTest.csproj.nuget.g.props
++++ b/StereoKitTest/obj/StereoKitTest.csproj.nuget.g.props
+@@ -7,7 +7,7 @@
+     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/home/ankit/.nuget/packages/</NuGetPackageRoot>
+     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/home/ankit/.nuget/packages/</NuGetPackageFolders>
+     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.11.1</NuGetToolVersion>
++    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.8.0</NuGetToolVersion>
+   </PropertyGroup>
+   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+     <SourceRoot Include="/home/ankit/.nuget/packages/" />
+diff --git a/StereoKitTest/obj/project.assets.json b/StereoKitTest/obj/project.assets.json
+index 6c7a641..efe462d 100644
+--- a/StereoKitTest/obj/project.assets.json
++++ b/StereoKitTest/obj/project.assets.json
+@@ -191,11 +191,6 @@
+         "warnAsError": [
+           "NU1605"
+         ]
+-      },
+-      "restoreAuditProperties": {
+-        "enableAudit": "true",
+-        "auditLevel": "low",
+-        "auditMode": "direct"
+       }
+     },
+     "frameworks": {
+@@ -223,7 +218,7 @@
+             "privateAssets": "all"
+           }
+         },
+-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.418/PortableRuntimeIdentifierGraph.json"
++        "runtimeIdentifierGraphPath": "/home/ankit/.dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+       }
+     }
+   }
+diff --git a/StereoKitTest/obj/project.nuget.cache b/StereoKitTest/obj/project.nuget.cache
+index 1a60096..2bbe458 100644
+--- a/StereoKitTest/obj/project.nuget.cache
++++ b/StereoKitTest/obj/project.nuget.cache
+@@ -1,6 +1,6 @@
+ {
+   "version": 2,
+-  "dgSpecHash": "A5iGtSat/eo=",
++  "dgSpecHash": "iS4oFge1Pd+bNOjkP+3wAumeww8MBL0SC/agdPxAN3x+nZIgq3x48UOD981oZnhwI9Acvb3aaX9FORQgiMUZvg==",
+   "success": true,
+   "projectFilePath": "/home/ankit/monado/StereoKitTest/StereoKitTest.csproj",
+   "expectedPackageFiles": [
+diff --git a/src/xrt/auxiliary/vk/vk_image_allocator.c b/src/xrt/auxiliary/vk/vk_image_allocator.c
+index de2d52b..7dce347 100644
+--- a/src/xrt/auxiliary/vk/vk_image_allocator.c
++++ b/src/xrt/auxiliary/vk/vk_image_allocator.c
+@@ -17,6 +17,16 @@
+ #include <vulkan/vulkan_core.h>
+ #include <xrt/xrt_handles.h>
+ 
++// DRM_FORMAT_MOD_INVALID
++#ifndef DRM_FORMAT_MOD_INVALID
++#define DRM_FORMAT_MOD_INVALID 0x00ffffffffffffffULL
++#endif
++
++// DRM_FORMAT_MOD_LINEAR
++#ifndef DRM_FORMAT_MOD_LINEAR
++#define DRM_FORMAT_MOD_LINEAR 0
++#endif
++
+ #ifdef XRT_OS_LINUX
+ #include <unistd.h>
+ #endif
+@@ -258,6 +268,88 @@ create_image(struct vk_bundle *vk, const struct xrt_swapchain_create_info *info,
+ 	    .sharingMode = VK_SHARING_MODE_EXCLUSIVE,
+ 	    .initialLayout = VK_IMAGE_LAYOUT_UNDEFINED,
+ 	};
++
++	// Track whether we used DRM modifier tiling.
++	bool used_drm_format_modifier_tiling = false;
++
++#if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD) && defined(VK_EXT_image_drm_format_modifier)
++	/*
++	 * When VK_EXT_image_drm_format_modifier is available, use DRM modifier
++	 * tiling instead of VK_IMAGE_TILING_OPTIMAL. This allows us to query
++	 * the actual modifier chosen by the driver and pass it to EGL on the
++	 * client side, which is critical for GPUs like V3D that use non-linear
++	 * tiling (UIF) for optimal images.
++	 */
++	VkDrmFormatModifierPropertiesListEXT mod_props_list = {
++	    .sType = VK_STRUCTURE_TYPE_DRM_FORMAT_MODIFIER_PROPERTIES_LIST_EXT,
++	};
++	VkFormatProperties2 format_props2 = {
++	    .sType = VK_STRUCTURE_TYPE_FORMAT_PROPERTIES_2,
++	    .pNext = &mod_props_list,
++	};
++
++	uint64_t *supported_modifiers = NULL;
++
++	if (vk->has_EXT_image_drm_format_modifier) {
++		// Query how many modifiers are supported for this format.
++		vk->vkGetPhysicalDeviceFormatProperties2(vk->physical_device, image_format, &format_props2);
++
++		if (mod_props_list.drmFormatModifierCount > 0) {
++			// Allocate and query the actual modifier properties.
++			VkDrmFormatModifierPropertiesEXT *mod_props = U_TYPED_ARRAY_CALLOC(
++			    VkDrmFormatModifierPropertiesEXT, mod_props_list.drmFormatModifierCount);
++			mod_props_list.pDrmFormatModifierProperties = mod_props;
++
++			vk->vkGetPhysicalDeviceFormatProperties2(vk->physical_device, image_format, &format_props2);
++
++			// Build the list of modifiers.
++			supported_modifiers = U_TYPED_ARRAY_CALLOC(uint64_t, mod_props_list.drmFormatModifierCount);
++			for (uint32_t m = 0; m < mod_props_list.drmFormatModifierCount; m++) {
++				supported_modifiers[m] = mod_props[m].drmFormatModifier;
++			}
++
++			VkImageDrmFormatModifierListCreateInfoEXT drm_mod_list = {
++			    .sType = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_LIST_CREATE_INFO_EXT,
++			    .pNext = create_info.pNext,
++			    .drmFormatModifierCount = mod_props_list.drmFormatModifierCount,
++			    .pDrmFormatModifiers = supported_modifiers,
++			};
++			create_info.pNext = &drm_mod_list;
++			create_info.tiling = VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT;
++			used_drm_format_modifier_tiling = true;
++
++			U_LOG_D("create_image: Using VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT with %u modifiers",
++			        mod_props_list.drmFormatModifierCount);
++
++			ret = vk->vkCreateImage(vk->device, &create_info, NULL, &image);
++
++			if (ret == VK_SUCCESS) {
++				VkImageDrmFormatModifierPropertiesEXT mod_props_final = {
++					.sType = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT,
++				};
++				vk->vkGetImageDrmFormatModifierPropertiesEXT(vk->device, image, &mod_props_final);
++				U_LOG_I("create_image: Successfully created image with modifier 0x%" PRIx64, mod_props_final.drmFormatModifier);
++			}
++
++			free(mod_props);
++
++			if (ret != VK_SUCCESS) {
++				// Fallback: try VK_IMAGE_TILING_OPTIMAL
++				U_LOG_W("create_image: DRM modifier tiling failed (%s), falling back to TILING_OPTIMAL",
++				        vk_result_string(ret));
++				create_info.pNext = next_chain;
++				create_info.tiling = VK_IMAGE_TILING_OPTIMAL;
++				used_drm_format_modifier_tiling = false;
++				free(supported_modifiers);
++				supported_modifiers = NULL;
++			}
++		}
++	}
++	if (supported_modifiers != NULL) {
++		free(supported_modifiers);
++		supported_modifiers = NULL;
++	}
++#endif // XRT_GRAPHICS_BUFFER_HANDLE_IS_FD && VK_EXT_image_drm_format_modifier
+ #if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_AHARDWAREBUFFER)
+ 	// VUID-VkImageCreateInfo-pNext-01974
+ 	if (format_android.externalFormat != 0) {
+@@ -266,7 +358,9 @@ create_image(struct vk_bundle *vk, const struct xrt_swapchain_create_info *info,
+ 	}
+ #endif
+ 
+-	ret = vk->vkCreateImage(vk->device, &create_info, NULL, &image);
++	if (image == VK_NULL_HANDLE) {
++		ret = vk->vkCreateImage(vk->device, &create_info, NULL, &image);
++	}
+ 	VK_CHK_AND_RET(ret, "vkCreateImage");
+ 
+ 	// In
+@@ -363,6 +457,37 @@ create_image(struct vk_bundle *vk, const struct xrt_swapchain_create_info *info,
+ 	out_image->memory = device_memory;
+ 	out_image->size = memory_requirements.memoryRequirements.size;
+ 	out_image->use_dedicated_allocation = use_dedicated_allocation;
++	out_image->drm_format_modifier = DRM_FORMAT_MOD_INVALID;
++	out_image->row_pitch = 0;
++
++#if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD) && defined(VK_EXT_image_drm_format_modifier)
++	if (used_drm_format_modifier_tiling && vk->vkGetImageDrmFormatModifierPropertiesEXT != NULL) {
++		VkImageDrmFormatModifierPropertiesEXT drm_mod_props = {
++		    .sType = VK_STRUCTURE_TYPE_IMAGE_DRM_FORMAT_MODIFIER_PROPERTIES_EXT,
++		};
++		VkResult mod_ret = vk->vkGetImageDrmFormatModifierPropertiesEXT(vk->device, image, &drm_mod_props);
++		if (mod_ret == VK_SUCCESS) {
++			out_image->drm_format_modifier = drm_mod_props.drmFormatModifier;
++			U_LOG_D("create_image: DRM modifier = 0x%" PRIx64, out_image->drm_format_modifier);
++
++			// Query the row pitch via subresource layout.
++			VkImageSubresource subresource = {
++			    .aspectMask = VK_IMAGE_ASPECT_MEMORY_PLANE_0_BIT_EXT,
++			    .mipLevel = 0,
++			    .arrayLayer = 0,
++			};
++			VkSubresourceLayout layout = {0};
++			vk->vkGetImageSubresourceLayout(vk->device, image, &subresource, &layout);
++			out_image->row_pitch = (uint32_t)layout.rowPitch;
++			U_LOG_D("create_image: Row pitch = %" PRIu32 " bytes", out_image->row_pitch);
++		} else {
++			U_LOG_W("create_image: vkGetImageDrmFormatModifierPropertiesEXT failed: %s",
++			        vk_result_string(mod_ret));
++		}
++	}
++#else
++	(void)used_drm_format_modifier_tiling;
++#endif
+ 
+ 	return ret;
+ }
+diff --git a/src/xrt/auxiliary/vk/vk_image_allocator.h b/src/xrt/auxiliary/vk/vk_image_allocator.h
+index 9beac50..73ceea1 100644
+--- a/src/xrt/auxiliary/vk/vk_image_allocator.h
++++ b/src/xrt/auxiliary/vk/vk_image_allocator.h
+@@ -30,6 +30,12 @@ struct vk_image
+ 	VkDeviceMemory memory;
+ 	VkDeviceSize size;
+ 	bool use_dedicated_allocation;
++
++	//! DRM format modifier (DRM_FORMAT_MOD_INVALID if unknown).
++	uint64_t drm_format_modifier;
++
++	//! Row pitch in bytes (0 if unknown).
++	uint32_t row_pitch;
+ };
+ 
+ struct vk_image_collection
+diff --git a/src/xrt/compositor/client/comp_gl_eglimage_swapchain.c b/src/xrt/compositor/client/comp_gl_eglimage_swapchain.c
+index e1662c3..73af569 100644
+--- a/src/xrt/compositor/client/comp_gl_eglimage_swapchain.c
++++ b/src/xrt/compositor/client/comp_gl_eglimage_swapchain.c
+@@ -30,6 +30,7 @@
+ #include "client/comp_gl_client.h"
+ #include "client/comp_egl_client.h"
+ #include "client/comp_gl_eglimage_swapchain.h"
++#include "client/comp_vk_client.h"
+ 
+ 
+ #ifdef XRT_GRAPHICS_BUFFER_HANDLE_IS_AHARDWAREBUFFER
+@@ -115,14 +116,14 @@ static inline uint32_t
+ gl_format_to_drm_fourcc(uint64_t format)
+ {
+ 	switch (format) {
+-
+-	case GL_RGBA8: return XRT_FOURCC('R', 'A', '2', '4');        /*DRM_FORMAT_RGBA8888*/
+-	case GL_SRGB8_ALPHA8: return XRT_FOURCC('R', 'A', '2', '4'); /*DRM_FORMAT_RGBA8888*/
+-	case GL_RGB10_A2: return XRT_FOURCC('A', 'B', '3', '0');     /*DRM_FORMAT_ABGR2101010*/
+-#if 0
+-	/* couldn't find a matching code? */
+-	case GL_RGBA16F:
+-#endif
++	case GL_RGBA8: return XRT_FOURCC('A', 'R', '2', '4');        /*DRM_FORMAT_ARGB8888*/
++	case GL_SRGB8_ALPHA8: return XRT_FOURCC('A', 'R', '2', '4'); /*DRM_FORMAT_ARGB8888*/
++	case GL_RGB10_A2: return XRT_FOURCC('A', 'R', '3', '0');     /*DRM_FORMAT_ARGB2101010*/
++	case GL_DEPTH_COMPONENT16: return XRT_FOURCC('R', '1', '6', ' ');
++	case GL_DEPTH_COMPONENT24: return XRT_FOURCC('R', '2', '4', ' ');
++	case GL_DEPTH_COMPONENT32F: return XRT_FOURCC('R', '3', '2', ' ');
++	case GL_DEPTH24_STENCIL8: return XRT_FOURCC('D', '2', '4', '8');
++	case GL_DEPTH32F_STENCIL8: return XRT_FOURCC('D', '3', '2', '8');
+ 	default: EGL_SC_ERROR("Cannot convert GL format 0x%08" PRIx64 " to DRM FOURCC format!", format); return 0;
+ 	}
+ }
+@@ -130,15 +131,15 @@ static inline uint32_t
+ gl_format_to_bpp(uint64_t format)
+ {
+ 	switch (format) {
+-
+ 	case GL_RGBA8: return 32;        /*DRM_FORMAT_RGBA8888*/
+ 	case GL_SRGB8_ALPHA8: return 32; /*DRM_FORMAT_RGBA8888*/
+ 	case GL_RGB10_A2: return 32;     /*DRM_FORMAT_ABGR2101010*/
+-#if 0
+-	/* couldn't find a matching code? */
+-	case GL_RGBA16F:
+-#endif
+-	default: EGL_SC_ERROR("Cannot convert GL format 0x%08" PRIx64 " to DRM FOURCC format!", format); return 0;
++	case GL_DEPTH_COMPONENT16: return 16;
++	case GL_DEPTH_COMPONENT24: return 32;
++	case GL_DEPTH_COMPONENT32F: return 32;
++	case GL_DEPTH24_STENCIL8: return 32;
++	case GL_DEPTH32F_STENCIL8: return 64;
++	default: EGL_SC_ERROR("Cannot convert GL format 0x%08" PRIx64 " to BPP!", format); return 0;
+ 	}
+ }
+ #endif // defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD)
+@@ -220,11 +221,27 @@ client_gl_eglimage_swapchain_create(struct xrt_compositor *xc,
+ 	ogl_texture_target_for_swapchain_info(info, &tex_target, &binding_enum);
+ 	sc->base.tex_target = tex_target;
+ 
++	// Identify if this is a depth swapchain
++	bool is_depth = (info->format == GL_DEPTH_COMPONENT16 || info->format == GL_DEPTH_COMPONENT24 ||
++	                 info->format == GL_DEPTH_COMPONENT32F || info->format == GL_DEPTH24_STENCIL8 ||
++	                 info->format == GL_DEPTH32F_STENCIL8);
++
+ 	for (uint32_t i = 0; i < native_xsc->image_count; i++) {
+ 
+ 		// Bind new texture name to the target.
+ 		glBindTexture(tex_target, xscgl->images[i]);
+ 
++		if (is_depth) {
++			EGL_SC_INFO("Bypassing EGLImage import for depth format 0x%04" PRIx64 ". Allocating local GL texture instead.", (uint64_t)info->format);
++			if (info->format == GL_DEPTH24_STENCIL8 || info->format == GL_DEPTH32F_STENCIL8) {
++				glTexImage2D(tex_target, 0, info->format, info->width, info->height, 0, GL_DEPTH_STENCIL, GL_UNSIGNED_INT_24_8, NULL);
++			} else {
++				glTexImage2D(tex_target, 0, info->format, info->width, info->height, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
++			}
++			sc->egl_images[i] = EGL_NO_IMAGE_KHR;
++			continue;
++		}
++
+ 		EGLClientBuffer native_buffer = NULL;
+ 
+ #if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_AHARDWAREBUFFER)
+@@ -261,28 +278,71 @@ client_gl_eglimage_swapchain_create(struct xrt_compositor *xc,
+ 
+ 		EGLenum source = EGL_NATIVE_BUFFER_ANDROID;
+ #elif defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD)
+-		EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR,
+-		                  EGL_TRUE,
+-		                  EGL_WIDTH,
+-		                  info->width,
+-		                  EGL_HEIGHT,
+-		                  info->height,
+-		                  EGL_LINUX_DRM_FOURCC_EXT,
+-		                  format,
+-		                  EGL_DMA_BUF_PLANE0_FD_EXT,
+-		                  xscn->images[i].handle,
+-		                  EGL_DMA_BUF_PLANE0_OFFSET_EXT,
+-		                  0,
+-		                  EGL_DMA_BUF_PLANE0_PITCH_EXT,
+-		                  row_pitch,
+-		                  EGL_NONE};
+-		EGLenum source = EGL_LINUX_DMA_BUF_EXT;
++		uint32_t image_row_pitch = row_pitch;
++		if (xscn->images[i].row_pitch != 0) {
++			image_row_pitch = xscn->images[i].row_pitch;
++			EGL_SC_INFO("Using server-provided row pitch: %" PRIu32 " bytes", image_row_pitch);
++		}
++
++		uint64_t modifier = xscn->images[i].drm_format_modifier;
++		bool has_modifier = (modifier != 0x00ffffffffffffffULL); // DRM_FORMAT_MOD_INVALID
++		EGL_SC_INFO("Importing swapchain image %u: format=0x%08x, modifier=0x%" PRIx64 " (has_modifier=%d)", i, format, modifier, has_modifier);
++
++		if (has_modifier) {
++			EGL_SC_INFO("Using DRM modifier: 0x%" PRIx64, modifier);
++			EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR,
++			                  EGL_TRUE,
++			                  EGL_WIDTH,
++			                  info->width,
++			                  EGL_HEIGHT,
++			                  info->height,
++			                  EGL_LINUX_DRM_FOURCC_EXT,
++			                  format,
++			                  EGL_DMA_BUF_PLANE0_FD_EXT,
++			                  xscn->images[i].handle,
++			                  EGL_DMA_BUF_PLANE0_OFFSET_EXT,
++			                  0,
++			                  EGL_DMA_BUF_PLANE0_PITCH_EXT,
++			                  image_row_pitch,
++			                  EGL_DMA_BUF_PLANE0_MODIFIER_LO_EXT,
++			                  (EGLint)(modifier & 0xFFFFFFFF),
++			                  EGL_DMA_BUF_PLANE0_MODIFIER_HI_EXT,
++			                  (EGLint)(modifier >> 32),
++			                  EGL_NONE};
++			EGLenum source = EGL_LINUX_DMA_BUF_EXT;
++			EGL_SC_INFO("EGL import using modifier: w=%u h=%u format=0x%08x pitch=%" PRIu32, info->width, info->height, format, image_row_pitch);
++			sc->egl_images[i] = eglCreateImageKHR(sc->display, EGL_NO_CONTEXT, source, native_buffer, attrs);
++		} else {
++			EGLint attrs[] = {EGL_IMAGE_PRESERVED_KHR,
++			                  EGL_TRUE,
++			                  EGL_WIDTH,
++			                  info->width,
++			                  EGL_HEIGHT,
++			                  info->height,
++			                  EGL_LINUX_DRM_FOURCC_EXT,
++			                  format,
++			                  EGL_DMA_BUF_PLANE0_FD_EXT,
++			                  xscn->images[i].handle,
++			                  EGL_DMA_BUF_PLANE0_OFFSET_EXT,
++			                  0,
++			                  EGL_DMA_BUF_PLANE0_PITCH_EXT,
++			                  image_row_pitch,
++			                  EGL_NONE};
++			EGLenum source = EGL_LINUX_DMA_BUF_EXT;
++			EGL_SC_INFO("EGL import LINEAR: w=%u h=%u format=0x%08x pitch=%" PRIu32, info->width, info->height, format, image_row_pitch);
++			sc->egl_images[i] = eglCreateImageKHR(sc->display, EGL_NO_CONTEXT, source, native_buffer, attrs);
++		}
+ #else
+ #error "need port"
+ #endif
+-		sc->egl_images[i] = eglCreateImageKHR(sc->display, EGL_NO_CONTEXT, source, native_buffer, attrs);
+ 		if (EGL_NO_IMAGE_KHR == sc->egl_images[i]) {
+-			EGL_SC_ERROR("eglCreateImageKHR failed");
++			EGLint err = eglGetError();
++			const char *exts = eglQueryString(sc->display, EGL_EXTENSIONS);
++			bool import_modifiers_supported = exts && strstr(exts, "EGL_EXT_image_dma_buf_import_modifiers") != NULL;
++			EGL_SC_ERROR("eglCreateImageKHR failed with error 0x%x (GL_format: 0x%04" PRIx64 ", DRM_format: 0x%08x, %dx%d, modifiers extension: %s, pitch: %u, modifier: 0x%" PRIx64 ")",
++			             err, info->format, format, info->width, info->height,
++			             import_modifiers_supported ? "supported" : "unsupported", image_row_pitch,
++			             xscn->images[i].drm_format_modifier);
+ 			client_gl_eglimage_swapchain_teardown_storage(sc);
+ 			free(sc);
+ 			return NULL;
+diff --git a/src/xrt/compositor/client/comp_vk_glue.c b/src/xrt/compositor/client/comp_vk_glue.c
+index 783e516..7ffe52d 100644
+--- a/src/xrt/compositor/client/comp_vk_glue.c
++++ b/src/xrt/compositor/client/comp_vk_glue.c
+@@ -27,7 +27,7 @@ const char *xrt_gfx_vk_instance_extensions = VK_KHR_EXTERNAL_FENCE_CAPABILITIES_
+ const char *xrt_gfx_vk_device_extensions = VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME
+     " " VK_KHR_EXTERNAL_FENCE_EXTENSION_NAME " " VK_KHR_EXTERNAL_MEMORY_EXTENSION_NAME
+     " " VK_KHR_EXTERNAL_SEMAPHORE_EXTENSION_NAME " " VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME
+-    " " VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME
++    " " VK_KHR_IMAGE_FORMAT_LIST_EXTENSION_NAME " " VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME
+ 
+ // Platform version of "external_memory"
+ #if defined(XRT_GRAPHICS_BUFFER_HANDLE_IS_FD)
+diff --git a/src/xrt/compositor/main/comp_compositor.c b/src/xrt/compositor/main/comp_compositor.c
+index 3364aae..f90ef4d 100644
+--- a/src/xrt/compositor/main/comp_compositor.c
++++ b/src/xrt/compositor/main/comp_compositor.c
+@@ -615,6 +615,9 @@ static const char *optional_device_extensions[] = {
+ #ifdef VK_KHR_synchronization2
+     VK_KHR_SYNCHRONIZATION_2_EXTENSION_NAME,
+ #endif
++#ifdef VK_EXT_image_drm_format_modifier
++    VK_EXT_IMAGE_DRM_FORMAT_MODIFIER_EXTENSION_NAME,
++#endif
+ };
+ 
+ static bool
+diff --git a/src/xrt/compositor/main/comp_settings.c b/src/xrt/compositor/main/comp_settings.c
+index 272d1d7..ec991a3 100644
+--- a/src/xrt/compositor/main/comp_settings.c
++++ b/src/xrt/compositor/main/comp_settings.c
+@@ -163,16 +163,8 @@ comp_settings_init(struct comp_settings *s, struct xrt_device *xdev)
+ 
+ 	if (debug_get_bool_option_force_xcb()) {
+ 		s->target_identifier = "x11";
+-
+-		// HMD screen tends to be much larger then monitors.
+-		s->preferred.width /= 2;
+-		s->preferred.height /= 2;
+ 	}
+ 	if (debug_get_bool_option_force_wayland()) {
+ 		s->target_identifier = "wayland";
+-
+-		// HMD screen tends to be much larger then monitors.
+-		s->preferred.width /= 2;
+-		s->preferred.height /= 2;
+ 	}
+ }
+diff --git a/src/xrt/compositor/util/comp_swapchain.c b/src/xrt/compositor/util/comp_swapchain.c
+index dea3beb..c66c8ec 100644
+--- a/src/xrt/compositor/util/comp_swapchain.c
++++ b/src/xrt/compositor/util/comp_swapchain.c
+@@ -539,6 +539,8 @@ comp_swapchain_create_init(struct comp_swapchain *sc,
+ 		sc->base.images[i].handle = handles[i];
+ 		sc->base.images[i].size = sc->vkic.images[i].size;
+ 		sc->base.images[i].use_dedicated_allocation = sc->vkic.images[i].use_dedicated_allocation;
++		sc->base.images[i].drm_format_modifier = sc->vkic.images[i].drm_format_modifier;
++		sc->base.images[i].row_pitch = sc->vkic.images[i].row_pitch;
+ 	}
+ 
+ 	xrt_result_t res = do_post_create_vulkan_setup(vk, info, sc);
+diff --git a/src/xrt/include/xrt/xrt_compositor.h b/src/xrt/include/xrt/xrt_compositor.h
+index c05232b..86d3eee 100644
+--- a/src/xrt/include/xrt/xrt_compositor.h
++++ b/src/xrt/include/xrt/xrt_compositor.h
+@@ -2189,6 +2189,25 @@ struct xrt_image_native
+ 	 *   which has awkward limitations, such as "usually no depth images allowed".
+ 	 */
+ 	bool is_dxgi_handle;
++
++	/*!
++	 * @brief DRM format modifier for the image layout.
++	 *
++	 * Set by the Vulkan allocator after querying
++	 * vkGetImageDrmFormatModifierPropertiesEXT. Value of 0 means
++	 * DRM_FORMAT_MOD_LINEAR. Only meaningful on Linux/FD-based platforms.
++	 * Set to DRM_FORMAT_MOD_INVALID (0x00ffffffffffffffULL) if unknown.
++	 */
++	uint64_t drm_format_modifier;
++
++	/*!
++	 * @brief Row pitch (stride) in bytes.
++	 *
++	 * The actual row pitch of the image as allocated by the Vulkan driver,
++	 * queried via vkGetImageSubresourceLayout. Set to 0 if unknown,
++	 * in which case the client should compute it from width and format.
++	 */
++	uint32_t row_pitch;
+ };
+ 
+ /*!
+diff --git a/src/xrt/ipc/client/ipc_client_compositor.c b/src/xrt/ipc/client/ipc_client_compositor.c
+index 7e299c6..584c4bd 100644
+--- a/src/xrt/ipc/client/ipc_client_compositor.c
++++ b/src/xrt/ipc/client/ipc_client_compositor.c
+@@ -279,6 +279,8 @@ swapchain_server_create(struct ipc_client_compositor *icc,
+ 	uint32_t image_count;
+ 	uint64_t size;
+ 	bool use_dedicated_allocation;
++	uint64_t modifier;
++	uint32_t row_pitch;
+ 
+ 	xret = ipc_call_swapchain_create( //
+ 	    icc->ipc_c,                   // connection
+@@ -287,6 +289,8 @@ swapchain_server_create(struct ipc_client_compositor *icc,
+ 	    &image_count,                 // out
+ 	    &size,                        // out
+ 	    &use_dedicated_allocation,    // out
++	    &modifier,                    // out
++	    &row_pitch,                   // out
+ 	    remote_handles,               // handles
+ 	    XRT_MAX_SWAPCHAIN_IMAGES);    // handles
+ 	if (xret == XRT_ERROR_SWAPCHAIN_FLAG_VALID_BUT_UNSUPPORTED) {
+@@ -311,6 +315,8 @@ swapchain_server_create(struct ipc_client_compositor *icc,
+ 		ics->base.images[i].handle = remote_handles[i];
+ 		ics->base.images[i].size = size;
+ 		ics->base.images[i].use_dedicated_allocation = use_dedicated_allocation;
++		ics->base.images[i].drm_format_modifier = modifier;
++		ics->base.images[i].row_pitch = row_pitch;
+ 	}
+ 
+ 	*out_xsc = &ics->base.base;
+diff --git a/src/xrt/ipc/server/ipc_server_handler.c b/src/xrt/ipc/server/ipc_server_handler.c
+index e60a490..66ddef3 100644
+--- a/src/xrt/ipc/server/ipc_server_handler.c
++++ b/src/xrt/ipc/server/ipc_server_handler.c
+@@ -1753,6 +1753,8 @@ ipc_handle_swapchain_create(volatile struct ipc_client_state *ics,
+                             uint32_t *out_image_count,
+                             uint64_t *out_size,
+                             bool *out_use_dedicated_allocation,
++                            uint64_t *out_modifier,
++                            uint32_t *out_row_pitch,
+                             uint32_t max_handle_capacity,
+                             xrt_graphics_buffer_handle_t *out_handles,
+                             uint32_t *out_handle_count)
+@@ -1802,6 +1804,8 @@ ipc_handle_swapchain_create(volatile struct ipc_client_state *ics,
+ 	// Assuming all images allocated in the same swapchain have the same allocation requirements.
+ 	*out_size = xscn->images[0].size;
+ 	*out_use_dedicated_allocation = xscn->images[0].use_dedicated_allocation;
++	*out_modifier = xscn->images[0].drm_format_modifier;
++	*out_row_pitch = xscn->images[0].row_pitch;
+ 	*out_id = index;
+ 	*out_image_count = xsc->image_count;
+ 
+diff --git a/src/xrt/ipc/shared/proto/50-swapchain.json b/src/xrt/ipc/shared/proto/50-swapchain.json
+index 429e81c..80a6395 100644
+--- a/src/xrt/ipc/shared/proto/50-swapchain.json
++++ b/src/xrt/ipc/shared/proto/50-swapchain.json
+@@ -18,7 +18,9 @@
+ 			{"name": "id", "type": "uint32_t"},
+ 			{"name": "image_count", "type": "uint32_t"},
+ 			{"name": "size", "type": "uint64_t"},
+-			{"name": "use_dedicated_allocation", "type": "bool"}
++			{"name": "use_dedicated_allocation", "type": "bool"},
++			{"name": "modifier", "type": "uint64_t"},
++			{"name": "row_pitch", "type": "uint32_t"}
+ 		],
+ 		"out_handles": {"type": "xrt_graphics_buffer_handle_t"}
+ 	},

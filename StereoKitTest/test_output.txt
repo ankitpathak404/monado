@@ -1,0 +1,230 @@
+[SK [0;34mdiagnostic[0;;0m] Initializing StereoKit v0.3.11 Linux ARM64...
+[SK [0;34mdiagnostic[0;;0m] Initializing Platform
+[SK [0;34mdiagnostic[0;;0m] [[0;33msk_gpu[0;;0m] EGL version 1.4
+[SK [0;34mdiagnostic[0;;0m] [[0;33msk_gpu[0;;0m] Using OpenGL: OpenGL ES 3.1 Mesa 24.2.8-1~bpo12+rpt4
+[SK [0;34mdiagnostic[0;;0m] [[0;33msk_gpu[0;;0m] Device: V3D 7.1.10.2
+[SK [0;34mdiagnostic[0;;0m] Starting a [0;32mXR[0;;0m mode app
+[SK [0;34mdiagnostic[0;;0m] Runtime OpenXR Extensions:
+[SK [0;34mdiagnostic[0;;0m] [1;30m___________________________________[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m|     [1;33mUsage [1;30m| [1;33mExtension[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m|-----------|----------------------[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_ANDROID_face_tracking
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_EXT_active_action_set_priority
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_EXT_debug_utils
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_EXT_dpad_binding
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_EXT_future
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_EXT_samsung_odyssey_controller
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_EXT_user_presence
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_FB_display_refresh_rate
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_FB_face_tracking2
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_FB_touch_controller_pro
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_FB_touch_controller_proximity
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_HTC_facial_tracking
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_HTC_vive_cosmos_controller_interaction
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_HTC_vive_focus3_controller_interaction
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_binding_modification
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_composition_layer_color_scale_bias
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_composition_layer_cylinder
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_composition_layer_equirect2
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_extended_struct_name_lengths
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_locate_spaces
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_maintenance1
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_opengl_enable
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_swapchain_usage_input_attachment_bit
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_visibility_mask
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_vulkan_enable
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_vulkan_enable2
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_KHR_vulkan_swapchain_format_list
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_META_touch_controller_plus
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_ML_ml2_controller_interaction
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_ball_on_a_stick_controller
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_blubur_s1
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_flipvr
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_force_feedback_curl
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_hydra
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_oculus_remote
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_psvr2_interaction
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_system_buttons
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MNDX_xdev_space
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_MND_headless
+[SK [0;34mdiagnostic[0;;0m] [1;30m|  LOG in xrCreateInstance: Instance created
+	createInfo->applicationInfo.applicationName: SKProjectName
+	createInfo->applicationInfo.applicationVersion: 1
+	createInfo->applicationInfo.engineName: StereoKit
+	createInfo->applicationInfo.engineVersion: 12299
+	createInfo->applicationInfo.apiVersion: 1.0.34
+	appinfo.detected.engine.name: (null)
+	appinfo.detected.engine.version: 0.0.0
+	quirks.disable_vulkan_format_depth: false
+	quirks.disable_vulkan_format_depth_stencil: false
+	quirks.no_validation_error_in_create_ref_space: true
+	quirks.skip_end_session: false
+	quirks.parallel_views: false
+	quirks.no_texture_source_alpha: false
+
+LOG in xrGetSystem: Selected devices
+	Head: 'Simulated HMD'
+	Eyes: '<none>'
+	Left: '<none>'
+	Right: '<none>'
+	Gamepad: '<none>'
+	Hand-Tracking Left (unobstructed): '<none>'
+	Hand-Tracking Right (unobstructed): '<none>'
+	Hand-Tracking Left (conforming): '<none>'
+	Hand-Tracking Right (conforming): '<none>'
+ERROR [ipc_compositor_get_reference_bounds_rect] ipc_call_compositor_get_reference_bounds_rect failed: XRT_ERROR_NOT_IMPLEMENTED [/home/ankit/monado/src/xrt/ipc/client/ipc_client_compositor.c:885]
+ERROR [ipc_compositor_get_reference_bounds_rect] ipc_call_compositor_get_reference_bounds_rect failed: XRT_ERROR_NOT_IMPLEMENTED [/home/ankit/monado/src/xrt/ipc/client/ipc_client_compositor.c:885]
+ present | [0;;0mXR_MND_swapchain_usage_input_attachment_bit
+[SK [0;34mdiagnostic[0;;0m] [1;30m|   present | [0;;0mXR_OPPO_controller_interaction
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_BD_controller_interaction[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_EXTX_overlay[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_EXT_eye_gaze_interaction[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_EXT_hand_interaction[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_EXT_hand_tracking[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_EXT_hand_tracking_data_source[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_EXT_hp_mixed_reality_controller[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_EXT_local_floor[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_KHR_composition_layer_depth[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_KHR_convert_timespec_time[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_KHR_opengl_es_enable[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_MNDX_egl_enable[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m| [1;36mACTIVATED [1;30m| [1;32mXR_MSFT_unbounded_reference_space[0;;0m
+[SK [0;34mdiagnostic[0;;0m] [1;30m|___________|______________________[0;;0m
+[SK [0;34mdiagnostic[0;;0m] Found OpenXR runtime: [0;32mMonado(XRT) by Collabora et al '28c16c6'[0;;0m 25.1.0
+[SK [0;34mdiagnostic[0;;0m] OpenXR requires GLES v2.0.0 - v3.2.1023
+[SK [0;34mdiagnostic[0;;0m] System name: [0;32mMonado: Simulated HMD[0;;0m
+[SK [0;34mdiagnostic[0;;0m] Platform does not support single-pass rendering
+[SK [0;34mdiagnostic[0;;0m] Creating view: [0;32mPrimaryStereo[0;;0m color:[0;32mrgba32_sRGB[0;;0m depth:[0;32mdepth32[0;;0m blend:[0;32mOpaque[0;;0m
+[SK [0;34mdiagnostic[0;;0m] OpenXR session begin.
+[SK [0;34mdiagnostic[0;;0m] Created [0;32mlocal[0;;0m app space at an offset of [0;37m(3.9e-06,2.9e-06,1e-07) (0,-1.3e-06,0,1)[0;;0m
+[SK [0;34mdiagnostic[0;;0m] Initializing Audio
+[SK [0;36minfo[0;;0m] Using audio backend: PulseAudio
+[SK [0;34mdiagnostic[0;;0m] Initializing Assets
+[SK [0;34mdiagnostic[0;;0m] Initializing Defaults
+[SK [0;33mwarning[0;;0m] [[0;33msk_gpu[0;;0m] skg_tex_set_contents_arr mip err: 0x502
+[SK [0;34mdiagnostic[0;;0m] Initializing Sprites
+[SK [0;34mdiagnostic[0;;0m] Initializing Lines
+[SK [0;34mdiagnostic[0;;0m] Initializing UI
+[SK [0;34mdiagnostic[0;;0m] Initializing Tools
+[SK [0;34mdiagnostic[0;;0m] Initializing Renderer
+[SK [0;34mdiagnostic[0;;0m] Initializing World
+[SK [0;34mdiagnostic[0;;0m] Initializing Physics
+[SK [0;34mdiagnostic[0;;0m] Initializing Input
+[SK [0;36minfo[0;;0m] Initialization successful
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;36minfo[0;;0m] [Passthrough] Waiting for shared memory... Could not find file '/dev/shm/monado_mp_frame'.
+[SK [0;3

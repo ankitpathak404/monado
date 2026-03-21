@@ -72,16 +72,17 @@ comp_settings_init(struct comp_settings *s, struct xrt_device *xdev)
 	s->use_compute = debug_get_bool_option_compute();
 
 	if (s->use_compute) {
-		// Tested working with a PSVR2 and a patched Mesa. Native format of the PSVR2. 10-bit formats should be
-		// preferred in all cases for lower colour banding.
-		add_format(s, VK_FORMAT_A2B10G10R10_UNORM_PACK32);
-
 		// Default 8-bit channel 32-bit pixel format, most commonly supported UNORM format across Windows and
 		// Linux.
 		add_format(s, VK_FORMAT_B8G8R8A8_UNORM);
 
 		// Next most common UNORM format.
 		add_format(s, VK_FORMAT_R8G8B8A8_UNORM);
+
+		// Tested working with a PSVR2 and a patched Mesa. Native format of the PSVR2. 10-bit formats should be
+		// preferred in all cases for lower colour banding.
+		// NOTE: Moved down in priority because V3D Wayland drivers fail to display 10-bit packed windows correctly!
+		add_format(s, VK_FORMAT_A2B10G10R10_UNORM_PACK32);
 
 		// Seen on some NVIDIA cards.
 		add_format(s, VK_FORMAT_A8B8G8R8_UNORM_PACK32);
@@ -163,16 +164,8 @@ comp_settings_init(struct comp_settings *s, struct xrt_device *xdev)
 
 	if (debug_get_bool_option_force_xcb()) {
 		s->target_identifier = "x11";
-
-		// HMD screen tends to be much larger then monitors.
-		s->preferred.width /= 2;
-		s->preferred.height /= 2;
 	}
 	if (debug_get_bool_option_force_wayland()) {
 		s->target_identifier = "wayland";
-
-		// HMD screen tends to be much larger then monitors.
-		s->preferred.width /= 2;
-		s->preferred.height /= 2;
 	}
 }

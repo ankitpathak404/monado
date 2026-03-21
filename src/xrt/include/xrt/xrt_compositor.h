@@ -2189,6 +2189,25 @@ struct xrt_image_native
 	 *   which has awkward limitations, such as "usually no depth images allowed".
 	 */
 	bool is_dxgi_handle;
+
+	/*!
+	 * @brief DRM format modifier for the image layout.
+	 *
+	 * Set by the Vulkan allocator after querying
+	 * vkGetImageDrmFormatModifierPropertiesEXT. Value of 0 means
+	 * DRM_FORMAT_MOD_LINEAR. Only meaningful on Linux/FD-based platforms.
+	 * Set to DRM_FORMAT_MOD_INVALID (0x00ffffffffffffffULL) if unknown.
+	 */
+	uint64_t drm_format_modifier;
+
+	/*!
+	 * @brief Row pitch (stride) in bytes.
+	 *
+	 * The actual row pitch of the image as allocated by the Vulkan driver,
+	 * queried via vkGetImageSubresourceLayout. Set to 0 if unknown,
+	 * in which case the client should compute it from width and format.
+	 */
+	uint32_t row_pitch;
 };
 
 /*!

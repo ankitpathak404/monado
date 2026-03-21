@@ -24,9 +24,10 @@
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfoInputs.cache
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.AssemblyInfo.cs
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CoreCompileInputs.cache
-/home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjec.D2E4C66B.Up2Date
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.dll
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/refint/SKProjectName.dll
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.pdb
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.genruntimeconfig.cache
 /home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/ref/SKProjectName.dll
+/home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.sourcelink.json
+/home/ankit/monado/StereoKitTest/SKProjectName/obj/Debug/net8.0/SKProjectName.csproj.CopyComplete

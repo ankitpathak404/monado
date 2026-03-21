@@ -1,0 +1,11 @@
+--- src/xrt/auxiliary/vk/vk_image_allocator.c
++++ src/xrt/auxiliary/vk/vk_image_allocator.c
+@@ -253,7 +253,7 @@
+     .mipLevels = info->mip_count,
+     .arrayLayers = info->array_size * info->face_count,
+     .samples = VK_SAMPLE_COUNT_1_BIT,
+-    .tiling = VK_IMAGE_TILING_OPTIMAL,
++    .tiling = VK_IMAGE_TILING_LINEAR,
+     .usage = image_usage,
+     .sharingMode = VK_SHARING_MODE_EXCLUSIVE,
+     .initialLayout = VK_IMAGE_LAYOUT_UNDEFINED,
