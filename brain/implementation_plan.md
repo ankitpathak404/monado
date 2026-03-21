@@ -1,0 +1,21 @@
+# Goal Description
+The compositor bug characterized by distorted, duplicated diagonal strips running across the display in `a.png` is caused by a memory layout mismatch between the server/compositor and the OpenXR client. 
+Recently, `vk_image_allocator.c` was patched to allocate swapchain images with `VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT` instead of `VK_IMAGE_TILING_OPTIMAL` if the DRM formats extension was available. While this correctly solved EGL imports for V3D GPUs, we missed updating the reciprocal client-side import logic for Vulkan clients (OpenXR apps like StereoKit).
+The client uses `vk_create_image_from_native` to re-create the `VkImage` wrapping the IPC file descriptor, but this function currently hard-codes `vk_info.tiling = VK_IMAGE_TILING_OPTIMAL;` without appending the required `VkImageDrmFormatModifierExplicitCreateInfoEXT` chain.
+
+## Proposed Changes
+We will update the `vk_create_image_from_native` function to dynamically utilize `VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT` and provide the explicit `VkSubresourceLayout` (using the `row_pitch` received from IPC) when the modifier is valid.
+
+### Monado Core Vulkan Helpers
+
+#### [MODIFY] vk_helpers.c
+- Add `VkImageDrmFormatModifierExplicitCreateInfoEXT` and `VkSubresourceLayout` structures to the `pNext` chain in `vk_create_image_from_native` if `image_native->drm_format_modifier` is not `DRM_FORMAT_MOD_INVALID` and the extension is available in the `vk_bundle`.
+- Overwrite `vk_info.tiling` to `VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT` when applying the modifier.
+
+## Verification Plan
+### Automated Tests
+- Run `make` to compile the Monado compositor successfully with the updated logic.
+- Run the provided `egl_gbm_test` or equivalent if available to ensure we haven't broken the linear import path either.
+
+### Manual Verification
+- The USER can restart `monado-service` and run their `StereoKit` app to confirm that the tearing, skewing, and repeating block artifacts previously seen in `a.png` are now resolved and the stereo view functions correctly.

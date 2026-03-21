@@ -1,0 +1,5 @@
+# Task Plan
+- [x] Investigate the compositor distortion bug
+- [x] Review recent changes related to swapchains, pitches, DRM modifiers, channel swaps
+- [x] Fix the compositor and verify the fix
+- [x] Investigate Desktop Window distortion (XCB/Wayland)

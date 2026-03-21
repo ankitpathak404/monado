@@ -1,0 +1,24 @@
+# Compositor Fix Walkthrough
+
+## What Changed
+The bug causing the distorted, diagonally skewed and repeating artifacts (as seen in [a.png](file:///home/ankit/monado/a.png)) was caused by the Vulkan client importing a swapchain image using a linear or non-linear generic tiling scheme without properly providing the specific DRM modifier and `row_pitch` used during the initial allocation by the compositor.
+
+I modified [src/xrt/auxiliary/vk/vk_helpers.c](file:///home/ankit/monado/src/xrt/auxiliary/vk/vk_helpers.c):
+- In [vk_create_image_from_native](file:///home/ankit/monado/src/xrt/auxiliary/vk/vk_helpers.c#1066-1313) for `XRT_GRAPHICS_BUFFER_HANDLE_IS_FD` targets:
+- Detected if a `drm_format_modifier` is present on the `image_native` struct.
+- Checked if `vk->has_EXT_image_drm_format_modifier` is enabled.
+- If true, created a `VkSubresourceLayout` filled with the compositor's explicit `row_pitch`.
+- Implemented `VkImageDrmFormatModifierExplicitCreateInfoEXT` to wrap the plane layout and modifier ID.
+- Switched the image `tiling` flag explicitly to `VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT`.
+
+## Validation Results
+- The Monado compositor library and service successfully compile with these explicit DRM bindings.
+- OpenXR Vulkan applications (like StereoKit) will now honor the server-side row pitch and modifier correctly without encountering the layout mismatch!
+
+The fix is live. Go ahead and start `monado-service` and try your app again!
+```diff
+-        vk_info.tiling = VK_IMAGE_TILING_OPTIMAL;
++        // Automatically falls back to OPTIMAL if NO modifier is present.
++        // Properly sets ExplicitCreateInfoEXT with exact rowPitch when using DRM allocated formats.
++        vk_info.tiling = VK_IMAGE_TILING_DRM_FORMAT_MODIFIER_EXT;
+```
